@@ -23,6 +23,19 @@ namespace ConsoleApplication26
             StaticDemo.Val = 8;
             Console.WriteLine("StaticDemo.val is " + StaticDemo.Val);
             Console.WriteLine("StaticDemo.ValDiv2(): " + StaticDemo.ValDiv2());
+
+            sub();
+
+            Console.WriteLine("StaticDemo.val is " + StaticDemo.Val);
+            Console.WriteLine("StaticDemo.ValDiv2(): " + StaticDemo.ValDiv2());
+        }
+
+        private static void sub()
+        {
+            Console.WriteLine("\n------ start sub functuion ------");
+            StaticDemo.Val = 2;
+            Console.WriteLine("StaticDemo.Valに2を代入しました.");
+            Console.WriteLine("------ start sub functuion ------\n");
         }
     }
 }
