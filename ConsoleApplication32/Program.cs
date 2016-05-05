@@ -33,10 +33,7 @@ namespace ConsoleApplication32
                 "Matsuko"
             };
 
-            Func<string, bool> predicate = delegate (string str)
-            {
-                return str.Length < 5;
-            };
+            Func<string, bool> predicate = str => str.Length < 5;
 
             int count = CountList(names, predicate);
             Console.WriteLine("count: {0}", count);
