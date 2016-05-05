@@ -21,11 +21,6 @@ namespace ConsoleApplication32
             return count;
         }
 
-        public static bool IsLengthLesThan5(string str)
-        {
-            return str.Length < 5;
-        }
-
         static void Main(string[] args)
         {
             List<string> names = new List<string>
@@ -38,7 +33,11 @@ namespace ConsoleApplication32
                 "Matsuko"
             };
 
-            Func<string, bool> predicate = IsLengthLesThan5;
+            Func<string, bool> predicate = delegate (string str)
+            {
+                return str.Length < 5;
+            };
+
             int count = CountList(names, predicate);
             Console.WriteLine("count: {0}", count);
         }
